@@ -1,8 +1,12 @@
+drop database dav_nest;
+create database dav_nest;
+use dav_nest;
+
 CREATE TABLE users (
     id INT auto_increment PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     created_at TIMESTAMP default NOW(),
-    updated_at TIMESTAMP default NOW() ON UPDATE NOW(),
+    updated_at TIMESTAMP default NOW() ON UPDATE NOW()
 );
 
 CREATE TABLE photos (
@@ -28,7 +32,7 @@ CREATE TABLE comments (
 
 CREATE TABLE tags (
     id INT auto_increment PRIMARY KEY,
-    tag VARCHAR(150) NOT NULL,
+    name VARCHAR(150) NOT NULL,
     created_at TIMESTAMP default NOW(),
     updated_at TIMESTAMP default NOW() ON UPDATE NOW()
 );
